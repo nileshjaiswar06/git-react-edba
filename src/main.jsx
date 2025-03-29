@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Dummy from './Components/dummy.jsx';
+import User from './Components/User.jsx';
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: '/dummy',
     element: <Dummy /> // If you want to display "Dummy" content for this route
+  },
+  {
+    path: '/user/:id', // Dynamic route for user ID
+    element: <User />
   }
 ]);
 
