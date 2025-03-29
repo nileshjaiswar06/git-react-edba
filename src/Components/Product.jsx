@@ -1,12 +1,12 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 
-const User = () => {
+const Product = () => {
 
   const {id} = useParams()
   return (
-    <div>User : {id}</div>
+    <div>Products : {id}</div>
   )
 }
 
-export default User
+export default Product

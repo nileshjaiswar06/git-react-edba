@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import Dummy from './Components/dummy.jsx'
 
 function App() {
   const [product, setProduct] = useState([])
@@ -8,7 +7,7 @@ function App() {
 
   const fetchData = async() => {
     setLoading(true)
-    const response = await fetch('https://fakestoreapi.com/products')
+    const response = await fetch(`https://fakestoreapi.com/products`)
     const data = await response.json()
 
     setProduct(data)
@@ -30,12 +29,12 @@ function App() {
                 <p>Price: ${item.price}</p>
                 <p>Description : {item.description}</p>
                 <img src={item.image} alt={item.title} style={{ maxWidth: '100px' }} />
+                <a href={`/product/${item.id}`}>View Product</a>
               </li>
             ))}
           </ul>
         )}
       </div>
-      <div><Dummy/></div>
     </>
   )
 }

@@ -3,8 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Dummy from './Components/dummy.jsx';
-import User from './Components/User.jsx';
+import Product from './Components/Product.jsx';
 
 const router = createBrowserRouter([
   {
@@ -12,12 +11,8 @@ const router = createBrowserRouter([
     element: <App />
   },
   {
-    path: '/dummy',
-    element: <Dummy /> // If you want to display "Dummy" content for this route
-  },
-  {
-    path: '/user/:id', // Dynamic route for user ID
-    element: <User />
+    path: '/product/:id', // Dynamic route for user ID
+    element: <Product />
   }
 ]);
 
