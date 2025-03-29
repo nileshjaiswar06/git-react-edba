@@ -2,7 +2,7 @@ import React from 'react'
 
 const Dummy = () => {
   return (
-    <div>Dummy</div>
+    <div>Dummy data</div>
   )
 }
 
